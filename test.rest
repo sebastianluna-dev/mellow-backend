@@ -1,0 +1,26 @@
+### Get all user
+GET http://localhost:8080/users
+
+### Use a query paramenter to add the amount of users you want
+GET http://localhost:8080/users/?usersQuantity=4
+
+### Add a new user
+POST http://localhost:8080/users
+content-type: application/json
+
+{
+  "name": "Juan Perez",
+  "age": 40
+}
+
+### Update an user, you just need to add the id at the end of the endpoint // delete the square brackets when you add the id
+PUT http://localhost:8080/users/[id here]
+content-type: application/json
+
+{
+  "name": "Juan Perez",
+  "age": "23"
+}
+
+### Delete an user
+DELETE http://localhost:8080/users/[id here]
